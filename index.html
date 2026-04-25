@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vicky | Odoo Developer Portfolio</title>
+    <meta name="description" content="Odoo Developer at Assert IT Solutions — building scalable ERP solutions with Python, XML & PostgreSQL. Custom modules, QWeb reports, and API integrations.">
+    <meta property="og:title" content="Vicky | Odoo Developer">
+    <meta property="og:description" content="Odoo Developer at Assert IT Solutions — Python, XML, PostgreSQL & Custom Modules. Promoted from Intern to Full-time.">
+    <meta property="og:image" content="vicky_odoo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vicky | Odoo Developer">
+    <meta name="twitter:description" content="Odoo Developer at Assert IT Solutions — Python, XML, PostgreSQL & Custom Modules.">
+    <meta name="twitter:image" content="vicky_odoo.png">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23714B67'/%3E%3Ctext y='75' x='50' text-anchor='middle' font-size='65' font-weight='bold' font-family='sans-serif' fill='%2300E88F'%3EV%3C/text%3E%3C/svg%3E">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&family=Fira+Code:wght@400;600&display=swap"
@@ -643,6 +653,43 @@
             }
         }
 
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: 20px;
+            animation: skillFill 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes skillFill {
+            from { width: 0%; }
+        }
+
+        @keyframes statGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0,232,143,0.15), 0 0 40px rgba(113,75,103,0.1); border-color: rgba(0,232,143,0.25); }
+            50%       { box-shadow: 0 0 40px rgba(0,232,143,0.4),  0 0 80px rgba(113,75,103,0.3);  border-color: rgba(0,232,143,0.6);  }
+        }
+
+        .stat-card { animation: statGlow 3s ease-in-out infinite; }
+
+        @keyframes statPop {
+            0%   { transform: scale(0.3) translateY(12px); }
+            70%  { transform: scale(1.18) translateY(-4px); }
+            100% { transform: scale(1) translateY(0); }
+        }
+
+        .stat-num {
+            display: inline-block;
+            transform: scale(0);
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00E88F, #714B67);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .stat-num.pop { animation: statPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
         @media (max-width: 480px) {
             .card-content {
                 font-size: 1.3rem;
@@ -909,7 +956,7 @@
                             </div>
                             <div style="margin-top:20px; display:flex; gap:10px;">
                                 <a href="https://www.linkedin.com/in/vicky-kumar-016479302" target="_blank" class="skill-tag" style="background:#0077b5; border:none; color:white; text-decoration:none;"><i class="fab fa-linkedin no-float"></i> LinkedIn</a>
-                                <a href="mailto:vicky@gmail.com" class="skill-tag" style="background:#ea4335; border:none; color:white; text-decoration:none;"><i class="fas fa-envelope no-float"></i> Email</a>
+                                <a href="mailto:vicky875014@gmail.com" class="skill-tag" style="background:#ea4335; border:none; color:white; text-decoration:none;"><i class="fas fa-envelope no-float"></i> Email</a>
                             </div>
                         </div>
                         <div style="flex-shrink: 0; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 3px solid var(--odoo-purple); box-shadow: 0 0 20px rgba(113, 75, 103, 0.5); transform: translateY(-20px);">
@@ -919,16 +966,53 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-title"><i class="fas fa-layer-group"></i> Stack</div>
-                    <div style="font-size: 2.2rem; display: flex; align-items: center; gap: 15px; margin-top:10px;">
-                        <img src="https://images.seeklogo.com/logo-png/32/1/odoo-logo-png_seeklogo-320087.png" alt="Odoo" style="height: 35px; width: auto; filter: drop-shadow(0 0 5px rgba(113, 75, 103, 0.6));">
-                        <i class="fab fa-python" style="color: #FFE873;" title="Python"></i>
-                        <i class="fab fa-js" style="color: #F7DF1E;" title="JavaScript"></i>
-                        <i class="fas fa-database" style="color: #336791;" title="PostgreSQL"></i>
-                        <i class="fas fa-code" style="color: #E44D26;" title="XML"></i>
-                    </div>
-                    <div style="margin-top:15px;">
-                        <span class="skill-tag term">Odoo 18</span><span class="skill-tag term">OWL</span><span class="skill-tag term">Python</span><span class="skill-tag term">XML</span><span class="skill-tag term">Postgresql</span>
+                    <div class="card-title"><i class="fas fa-layer-group"></i> Skill Meter</div>
+                    <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 13px;">
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                                <span style="color:#e2e8f0; display:flex; align-items:center; gap:7px;"><img src="https://images.seeklogo.com/logo-png/32/1/odoo-logo-png_seeklogo-320087.png" style="height:13px; filter:brightness(1.2);" alt=""> Odoo Dev</span>
+                                <span style="color:#00E88F; font-weight:700;">90%</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.08); border-radius:20px; height:7px; overflow:hidden;">
+                                <div class="skill-bar-fill" style="width:90%; background:linear-gradient(90deg,#714B67,#00E88F);"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                                <span style="color:#e2e8f0; display:flex; align-items:center; gap:7px;"><i class="fab fa-python no-float" style="color:#FFE873;"></i> Python</span>
+                                <span style="color:#00E88F; font-weight:700;">85%</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.08); border-radius:20px; height:7px; overflow:hidden;">
+                                <div class="skill-bar-fill" style="width:85%; background:linear-gradient(90deg,#714B67,#FFE873);"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                                <span style="color:#e2e8f0; display:flex; align-items:center; gap:7px;"><i class="fas fa-database no-float" style="color:#336791;"></i> PostgreSQL</span>
+                                <span style="color:#00E88F; font-weight:700;">75%</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.08); border-radius:20px; height:7px; overflow:hidden;">
+                                <div class="skill-bar-fill" style="width:75%; background:linear-gradient(90deg,#714B67,#336791);"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                                <span style="color:#e2e8f0; display:flex; align-items:center; gap:7px;"><i class="fas fa-code no-float" style="color:#E44D26;"></i> XML / QWeb</span>
+                                <span style="color:#00E88F; font-weight:700;">80%</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.08); border-radius:20px; height:7px; overflow:hidden;">
+                                <div class="skill-bar-fill" style="width:80%; background:linear-gradient(90deg,#714B67,#E44D26);"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                                <span style="color:#e2e8f0; display:flex; align-items:center; gap:7px;"><i class="fab fa-js no-float" style="color:#F7DF1E;"></i> JS / OWL</span>
+                                <span style="color:#00E88F; font-weight:700;">65%</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.08); border-radius:20px; height:7px; overflow:hidden;">
+                                <div class="skill-bar-fill" style="width:65%; background:linear-gradient(90deg,#714B67,#F7DF1E);"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -953,6 +1037,27 @@
                 <div class="card" onclick="window.open('vicky_resume odoo developer.pdf')" style="cursor:pointer; background: linear-gradient(135deg, var(--odoo-purple), #5b21b6);">
                     <div class="card-title" style="color:rgba(255,255,255,0.8);">Quick Action</div>
                     <div class="card-content" style="font-size:1.4rem; color:white;"><i class="fas fa-download no-float"></i> Resume</div>
+                </div>
+
+                <div class="card stat-card" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(113,75,103,0.15), rgba(0,232,143,0.08));">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; padding: 8px 0;">
+                        <div style="padding: 10px;">
+                            <div class="stat-num" data-target="5" data-suffix="+">0+</div>
+                            <div style="color:#94a3b8; font-size:0.82rem; margin-top:6px; letter-spacing:0.5px;">Projects Delivered</div>
+                        </div>
+                        <div style="padding: 10px; border-left: 1px solid rgba(255,255,255,0.08);">
+                            <div class="stat-num" data-target="15" data-suffix="+">0+</div>
+                            <div style="color:#94a3b8; font-size:0.82rem; margin-top:6px; letter-spacing:0.5px;">Custom Modules Built</div>
+                        </div>
+                        <div style="padding: 10px; border-left: 1px solid rgba(255,255,255,0.08);">
+                            <div class="stat-num" data-target="4" data-suffix="+">0+</div>
+                            <div style="color:#94a3b8; font-size:0.82rem; margin-top:6px; letter-spacing:0.5px;">Clients Trained</div>
+                        </div>
+                        <div style="padding: 10px; border-left: 1px solid rgba(255,255,255,0.08);">
+                            <div class="stat-num" data-target="1" data-suffix="+">0+</div>
+                            <div style="color:#94a3b8; font-size:0.82rem; margin-top:6px; letter-spacing:0.5px;">Years Experience</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card" style="grid-column: 1 / -1; border-color: rgba(0, 232, 143, 0.3);">
@@ -982,6 +1087,10 @@
                                     <div class="term" style="font-size:1.05rem; font-weight:600; margin-bottom:8px;"><i class="fas fa-chalkboard-teacher" style="color:#eab308;"></i> Consulting & Training</div>
                                     <div class="card-desc" style="font-size:0.85rem;">Conducting client meetings, gathering requirements, providing live system demos, and delivering end-user functional training.</div>
                                 </div>
+                                <div>
+                                    <div class="term" style="font-size:1.05rem; font-weight:600; margin-bottom:8px;"><i class="fas fa-file-import" style="color:#a78bfa;"></i> Data Import & Migration</div>
+                                    <div class="card-desc" style="font-size:0.85rem;">Migrating legacy or external data into Odoo seamlessly — from Excel sheets, CSVs, or old ERP systems — with clean mapping, validation, and zero data loss.</div>
+                                </div>
                             </div>
                         </div>
 
@@ -998,48 +1107,114 @@
             `,
 
             'projects': `
+                <!-- ROW 1: Real Estate CRM (2 cols) + Training (1 col) -->
                 <div class="card card-large" style="border-color: var(--odoo-purple); box-shadow: 0 0 15px rgba(113, 75, 103, 0.2);">
-                    <div class="card-title" style="color:#00E88F"><i class="fas fa-building"></i> Full Module Development</div>
+                    <div class="card-title" style="color:#00E88F"><i class="fas fa-building"></i> Full Module Development · Odoo 17</div>
                     <div class="card-content">Real Estate CRM</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;">
+                        <span class="skill-tag" style="background:rgba(113,75,103,0.3); border-color:var(--odoo-purple);">Python</span>
+                        <span class="skill-tag" style="background:rgba(113,75,103,0.3); border-color:var(--odoo-purple);">XML</span>
+                        <span class="skill-tag" style="background:rgba(113,75,103,0.3); border-color:var(--odoo-purple);">PostgreSQL</span>
+                        <span class="skill-tag" style="background:rgba(113,75,103,0.3); border-color:var(--odoo-purple);">Odoo 17</span>
+                    </div>
                     <div class="card-desc">
-                        • <b>End-to-End System:</b> Built an Odoo 17 module from scratch managing the complete lead lifecycle from generation to closure.<br>
-                        • <b>Role Hierarchy:</b> Strict access controls for Admin, RM (Relationship Manager), Channel Partners, and Calling/Visiting Staff.<br>
-                        • <b>Smart Automation:</b> Implemented automatic lead distribution, scheduled actions, and automated dynamic email triggers.<br>
-                        • <b>Tracking & Bookings:</b> Interactive analytical dashboards, site visit tracking, and complete unit booking stages (Hold, Booked, Cancel).
+                        • <b>End-to-End System:</b> Built from scratch managing the complete lead lifecycle from generation to closure.<br>
+                        • <b>Role Hierarchy:</b> Strict access controls for Admin, RM, Channel Partners, and Calling/Visiting Staff.<br>
+                        • <b>Smart Automation:</b> Automatic lead distribution, scheduled actions, and dynamic email triggers.<br>
+                        • <b>Tracking & Bookings:</b> Analytical dashboards, site visit tracking, and unit booking stages (Hold, Booked, Cancel).
                     </div>
                     <div class="code-box"><span class="kw">class</span> <span class="func">RealEstateLead</span>(models.Model):<br>&nbsp;&nbsp;_name = <span class="str">'real.estate.lead'</span></div>
                 </div>
 
+                <div class="card" style="background: linear-gradient(135deg, #1e293b, #0f172a); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div class="card-title" style="color:#00E88F"><i class="fas fa-chalkboard-teacher"></i> Client Training</div>
+                        <div class="card-content" style="font-size: 1.4rem;">Client Success</div>
+                        <div class="card-desc"><span class="term">Delivered on-site functional training for Purchase, Sales, Inventory & Manufacturing workflows to end-users at client premises.</span></div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px;">
+                        <div style="background: rgba(0,232,143,0.08); border: 1px solid rgba(0,232,143,0.25); border-radius: 12px; padding: 12px 8px; display: flex; flex-direction: column; align-items: center; gap: 7px; text-align: center; transition: all 0.3s ease;">
+                            <i class="fas fa-chart-line no-float" style="font-size: 1.6rem; color: #00E88F; filter: drop-shadow(0 0 8px rgba(0,232,143,0.6));"></i>
+                            <span style="font-size: 0.78rem; color: #e2e8f0; font-weight: 600; letter-spacing: 0.5px;">Sales</span>
+                        </div>
+                        <div style="background: rgba(247,223,30,0.08); border: 1px solid rgba(247,223,30,0.25); border-radius: 12px; padding: 12px 8px; display: flex; flex-direction: column; align-items: center; gap: 7px; text-align: center; transition: all 0.3s ease;">
+                            <i class="fas fa-shopping-bag no-float" style="font-size: 1.6rem; color: #F7DF1E; filter: drop-shadow(0 0 8px rgba(247,223,30,0.6));"></i>
+                            <span style="font-size: 0.78rem; color: #e2e8f0; font-weight: 600; letter-spacing: 0.5px;">Purchase</span>
+                        </div>
+                        <div style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); border-radius: 12px; padding: 12px 8px; display: flex; flex-direction: column; align-items: center; gap: 7px; text-align: center; transition: all 0.3s ease;">
+                            <i class="fas fa-boxes no-float" style="font-size: 1.6rem; color: #3b82f6; filter: drop-shadow(0 0 8px rgba(59,130,246,0.6));"></i>
+                            <span style="font-size: 0.78rem; color: #e2e8f0; font-weight: 600; letter-spacing: 0.5px;">Inventory</span>
+                        </div>
+                        <div style="background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.25); border-radius: 12px; padding: 12px 8px; display: flex; flex-direction: column; align-items: center; gap: 7px; text-align: center; transition: all 0.3s ease;">
+                            <i class="fas fa-industry no-float" style="font-size: 1.6rem; color: #f97316; filter: drop-shadow(0 0 8px rgba(249,115,22,0.6));"></i>
+                            <span style="font-size: 0.78rem; color: #e2e8f0; font-weight: 600; letter-spacing: 0.5px;">Manufacturing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 2: Education ERP full width -->
+                <div class="card" style="grid-column: 1 / -1; border-color: rgba(0, 232, 143, 0.35); box-shadow: 0 0 20px rgba(0, 232, 143, 0.08);">
+                    <div class="card-title" style="color:#00E88F"><i class="fas fa-graduation-cap"></i> Full Module Development · Odoo 18</div>
+                    <div style="display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start;">
+                        <div style="flex: 2; min-width: 280px;">
+                            <div class="card-content">Education Management ERP</div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;">
+                                <span class="skill-tag" style="background:rgba(0,232,143,0.15); border-color:rgba(0,232,143,0.4);">Python</span>
+                                <span class="skill-tag" style="background:rgba(0,232,143,0.15); border-color:rgba(0,232,143,0.4);">XML</span>
+                                <span class="skill-tag" style="background:rgba(0,232,143,0.15); border-color:rgba(0,232,143,0.4);">PostgreSQL</span>
+                                <span class="skill-tag" style="background:rgba(0,232,143,0.15); border-color:rgba(0,232,143,0.4);">QWeb</span>
+                                <span class="skill-tag" style="background:rgba(0,232,143,0.15); border-color:rgba(0,232,143,0.4);">Odoo 18</span>
+                            </div>
+                            <div class="card-desc">
+                                • <b>Admission & Enquiry:</b> End-to-end student admission pipeline with enquiry tracking and course/batch mapping.<br>
+                                • <b>Fee Structure & Invoicing:</b> Dynamic head-wise fee structures with automated invoice generation per academic session.<br>
+                                • <b>Bulk Import Wizard:</b> CSV/Excel import with auto student creation, duplicate detection, and bulk payment registration.<br>
+                                • <b>Fee Refund Module:</b> Partial/full refunds with credit notes, excess payment handling, and outbound payment reconciliation.<br>
+                                • <b>Promotion Wizard:</b> Semester-wise batch promotion for entire student cohorts in a single operation.
+                            </div>
+                        </div>
+                        <div style="flex: 1; min-width: 220px;">
+                            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+                                <div style="background: rgba(0,232,143,0.07); border: 1px solid rgba(0,232,143,0.2); border-radius: 10px; padding: 12px;">
+                                    <div style="color: #00E88F; font-size: 0.8rem; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-file-pdf"></i> Custom Reports</div>
+                                    <div class="card-desc" style="font-size: 0.82rem;">Payment Receipt & Head-wise Fee Ledger with running balance via QWeb PDF.</div>
+                                </div>
+                                <div style="background: rgba(113,75,103,0.15); border: 1px solid rgba(113,75,103,0.3); border-radius: 10px; padding: 12px;">
+                                    <div style="color: var(--odoo-purple); filter: brightness(1.8); font-size: 0.8rem; font-weight: 600; margin-bottom: 4px;"><i class="fas fa-code-branch"></i> Accounting Flows</div>
+                                    <div class="card-desc" style="font-size: 0.82rem;">Custom partial reconciliation, credit notes & outbound payment flows.</div>
+                                </div>
+                            </div>
+                            <div class="code-box" style="margin-top: 12px; font-size: 0.75rem;">
+                                <span class="kw">def</span> <span class="func">action_import</span>(self):<br>
+                                &nbsp;&nbsp;df = pandas.read_excel(self.file)<br>
+                                &nbsp;&nbsp;<span style="color:#6a9955;"># auto-map, dedup & register</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3: POS & QWeb (2 cols) + Custom Modules (1 col) -->
                 <div class="card card-large">
-                    <div class="card-title" style="color:#00E88F">UI & Reporting</div>
+                    <div class="card-title" style="color:#00E88F"><i class="fas fa-cash-register"></i> UI & Reporting</div>
                     <div class="card-content">POS & QWeb Reports</div>
                     <div class="card-desc">
-                        • <b>POS:</b> Customized Point of Sale UI/UX for specific retail needs.<br>
-                        • <b>Reports:</b> Designed pixel-perfect <b>Purchase Order</b> templates & <b>Ledger Reports</b> tailored to client branding.
+                        • <b>POS Customization:</b> Modified Point of Sale UI/UX flows for specific retail business needs and client branding.<br>
+                        • <b>Purchase Order Reports:</b> Pixel-perfect custom PO templates overriding Odoo's default with client-specific layouts.<br>
+                        • <b>Ledger Reports:</b> Designed detailed account ledger reports with date filters and formatted PDF output.
                     </div>
-                    <div class="code-box"><span class="kw">&lt;template</span> <span class="kw">id=</span><span class="str">"report_po_custom"</span> <span class="kw">inherit_id=</span><span class="str">"purchase.report_purchaseorder"</span>&gt;</div>
+                    <div class="code-box"><span class="kw">&lt;template</span> id=<span class="str">"report_po_custom"</span> inherit_id=<span class="str">"purchase.report_purchaseorder"</span>&gt;</div>
                 </div>
 
-                <div class="card">
-                    <div class="card-title" style="color:#00E88F">Education ERP</div>
-                    <div class="card-content">Payment System</div>
-                    <div class="card-desc"><span class="term">Designed PDF Receipts and added custom Action Buttons for college fee collection module.</span></div>
-                </div>
-
-                <div class="card" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
-                    <div class="card-title" style="color:#00E88F">Training</div>
-                    <div class="card-content">Client Success</div>
-                    <div class="card-desc"><span class="term">Delivered on-site functional training for Purchase, Sales, Inventory & Manufacturing workflows to end-users.</span></div>
-                </div>
-
-                <div class="card card-large">
-                    <div class="card-title" style="color:#00E88F">Backend Logic</div>
-                    <div class="card-content">Custom Modules</div>
-                    <div class="card-desc">
-                        • <b>Project App:</b> Added custom Status stages & validation logic.<br>
-                        • <b>Development:</b> Built numerous standalone custom modules for specific business logic requirements.
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div class="card-title" style="color:#00E88F"><i class="fas fa-cubes"></i> Backend Logic</div>
+                        <div class="card-content" style="font-size: 1.4rem;">Custom Modules</div>
+                        <div class="card-desc"><span class="term">Built standalone custom modules for specific business logic — custom Project status stages, validation flows, and client-specific automations.</span></div>
                     </div>
-                    <div class="code-box"><span class="kw">def</span> <span class="func">action_import</span>(self):<br>&nbsp;&nbsp;data = pandas.read_excel(self.file)</div>
+                    <div class="code-box" style="font-size: 0.78rem; margin-top: 12px;">
+                        <span class="kw">def</span> <span class="func">action_validate</span>(self):<br>
+                        &nbsp;&nbsp;self.state = <span class="str">'approved'</span>
+                    </div>
                 </div>
             `,
 
@@ -1182,8 +1357,38 @@
             }
 
             const cards = grid.querySelectorAll('.card, .exp-card');
-            cards.forEach((card, index) => { card.style.animation = `popUp 0.5s ease forwards ${index * 0.1}s`; });
+            cards.forEach((card, index) => {
+                const delay = index * 0.1;
+                if (card.classList.contains('stat-card')) {
+                    card.style.animation = `popUp 0.5s ease forwards ${delay}s, statGlow 3s ease-in-out ${delay + 0.6}s infinite`;
+                } else {
+                    card.style.animation = `popUp 0.5s ease forwards ${delay}s`;
+                }
+            });
             initTilt();
+
+            if (pageName === 'home') {
+                const preloader = document.getElementById('preloader');
+                const isFirstLoad = preloader && preloader.style.display !== 'none';
+                const counterDelay = isFirstLoad ? 2300 : 400;
+                setTimeout(() => {
+                    document.querySelectorAll('.stat-num').forEach((el, i) => {
+                        const target = parseInt(el.dataset.target);
+                        const suffix = el.dataset.suffix || '';
+                        setTimeout(() => {
+                            el.classList.add('pop');
+                            let current = 0;
+                            const steps = 40;
+                            const increment = target / steps;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) { current = target; clearInterval(timer); }
+                                el.textContent = Math.floor(current) + suffix;
+                            }, 1000 / steps);
+                        }, i * 150);
+                    });
+                }, counterDelay);
+            }
 
             if (pageName === 'contact') {
                 const quoteText = `"Great things in business are never done by one person."`;
